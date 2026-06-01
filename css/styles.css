@@ -1,0 +1,43 @@
+/* Custom Styles for Project Manager */
+
+:root {
+    --primary-color: #0d6efd;
+    --transition-speed: 0.3s;
+}
+
+/* Efecto de elevación en las tarjetas al pasar el mouse (Mejora la UX) */
+.card {
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Estilo para que el Login no se vea tan pegado arriba en móviles */
+#app {
+    min-height: 80vh;
+}
+
+/* Personalización de los bordes laterales de las tarjetas según el estado */
+.border-warning { border-left-width: 8px !important; }
+.border-success { border-left-width: 8px !important; }
+.border-secondary { border-left-width: 8px !important; }
+
+/* Botón de cerrar sesión con una transición suave */
+#logout-btn {
+    transition: all 0.2s;
+}
+
+/* Estilo para el modal (asegurar que se vea bien centrado) */
+.modal {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px); /* Efecto de desenfoque al fondo */
+}
+
+/* Ajuste para las imágenes o avatares si decidieras ponerlos */
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
